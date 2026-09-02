@@ -374,11 +374,13 @@ button, input, select, textarea {
 .nav-links a:hover,
 .nav-links a.active {
   opacity: 1;
+}
+
+.nav-links a:hover {
   transform: translateY(-1px);
 }
 
-.nav-links a:hover::after,
-.nav-links a.active::after {
+.nav-links a:hover::after {
   transform: scaleX(1);
   transform-origin: left center;
 }
@@ -1552,14 +1554,62 @@ button, input, select, textarea {
   text-transform: capitalize;
 }
 
-/* ABOUT PAGE: EDITORIAL INTRO */
+/* ABOUT PAGE: EDITORIAL INTRO WITH AMBIENT ANIMATION & DIVIDING BORDER */
 .about-hero-section {
+  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-top: clamp(120px, 14vw, 155px);
-  padding-bottom: clamp(36px, 5vw, 54px);
+  padding-bottom: clamp(40px, 5vw, 60px);
   background: var(--light-bg);
+  border-bottom: 1px solid rgba(37, 40, 30, 0.1);
+}
+
+.about-hero-section .lux-container {
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero-section::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: 10%;
+  width: 580px;
+  height: 580px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(84, 91, 69, 0.14) 0%, rgba(84, 91, 69, 0) 70%);
+  filter: blur(55px);
+  pointer-events: none;
+  animation: floatAuraOne 14s ease-in-out infinite alternate;
+}
+
+.about-hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  right: 12%;
+  width: 540px;
+  height: 540px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 199, 171, 0.35) 0%, rgba(212, 199, 171, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+  animation: floatAuraTwo 16s ease-in-out infinite alternate;
+}
+
+@keyframes floatAuraOne {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate(45px, 25px) scale(1.15); opacity: 1; }
+  100% { transform: translate(-30px, 20px) scale(0.95); opacity: 0.75; }
+}
+
+@keyframes floatAuraTwo {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.65; }
+  50% { transform: translate(-50px, -25px) scale(1.12); opacity: 1; }
+  100% { transform: translate(25px, -35px) scale(0.9); opacity: 0.6; }
 }
 
 .about-intro-copy {
