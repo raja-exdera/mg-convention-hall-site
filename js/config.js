@@ -5,11 +5,11 @@
 */
 window.MG_CONFIG = {
   venueName: "M.G Convention Hall",
-  location: "Bidarahalli",
+  location: "Bidarahalli, Bengaluru",
   phoneDisplay: "+91 XXXXX XXXXX",
   phoneHref: "tel:+91XXXXXXXXXX",
   whatsappNumber: "91XXXXXXXXXX",
-  email: "enquiries@example.com",
-  address: "Bidarahalli",
-  mapsQuery: "M.G Convention Hall Bidarahalli"
+  address: "M.G Convention Hall, Bidarahalli, Bengaluru, Karnataka - 560049",
+  mapsQuery: "M.G Convention Hall Bidarahalli",
+  developerCredit: "Developed by Creative Nuts"
 };

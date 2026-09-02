@@ -10,27 +10,71 @@
 <body class="bg-cream text-ink antialiased">
 <div id="site-header"></div>
 <main>
-<section class="page-title section-pad pb-10"><div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10"><p class="eyebrow reveal">Get in touch</p><h1 class="display-heading mt-4 max-w-4xl reveal">Tell us about your event.</h1><p class="mt-5 max-w-xl text-lg leading-8 text-black/60 reveal delay-1">Share the date, event type and what you need. The form can hand the enquiry directly to WhatsApp or email.</p></div></section>
+  <section class="page-title-section">
+    <div class="lux-container">
+      <p class="section-kicker reveal">Get in touch</p>
+      <h1 class="section-title reveal mt-3">Tell us about your event.</h1>
+      <p class="muted max-w-xl mt-4 reveal delay-1">
+        Share your event date, expected guest count and special requirements. We will connect directly with you on WhatsApp to confirm details.
+      </p>
+    </div>
+  </section>
 
-<section id="enquiry" class="pb-24"><div class="mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-[1.25fr_.75fr] lg:px-10">
-<form id="enquiry-form" class="form-card reveal">
-<div class="grid gap-5 sm:grid-cols-2">
-<label>Name<input required name="name" placeholder="Your name"></label>
-<label>Contact<input required name="contact" placeholder="Phone / WhatsApp"></label>
-<label>Date of Event<input required type="date" name="date"></label>
-<label>Type of Event<select required name="eventType"><option value="">Select</option><option>Wedding</option><option>Reception</option><option>Corporate Event</option><option>Conference</option><option>Birthday / Celebration</option><option>Other</option></select></label>
-<label class="sm:col-span-2">Message<textarea name="message" rows="6" placeholder="Tell us about guest count, rooms, dining or other requirements..."></textarea></label>
-</div>
-<button class="btn btn-dark mt-6 w-full sm:w-auto" type="submit">Send Enquiry <span>↗</span></button>
-<p id="form-status" class="mt-4 hidden text-sm font-semibold"></p>
-</form>
+  <section id="enquiry" class="lux-section-compact pb-24">
+    <div class="lux-container grid gap-10 lg:grid-cols-[1.3fr_.9fr] items-start">
+      <form id="enquiry-form" class="lux-form-light reveal">
+        <div class="form-card-header">
+          <h3>Event Booking & Enquiry</h3>
+          <p>Direct WhatsApp reservation & date availability check</p>
+        </div>
+        <div class="form-row">
+          <label>Full Name<input required name="name" placeholder="Your name"></label>
+          <label>Phone / WhatsApp<input required name="contact" placeholder="+91 98765 43210"></label>
+        </div>
+        <div class="form-row">
+          <label>Date of Event<input required type="date" name="date"></label>
+          <label>Type of Event<select required name="eventType"><option value="">Select event</option><option>Wedding</option><option>Reception</option><option>Corporate Event</option><option>Conference</option><option>Birthday / Celebration</option><option>Other</option></select></label>
+        </div>
+        <label>Message / Requirements<textarea name="message" rows="5" placeholder="Tell us about guest count, rooms, catering, or other needs..."></textarea></label>
+        <button class="lux-btn lux-btn-dark w-full" type="submit">
+          <span>Send Enquiry via WhatsApp</span>
+          <svg class="icon-arrow-diagonal" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        </button>
+        <p id="form-status" class="form-status hidden"></p>
+      </form>
 
-<aside class="space-y-5 reveal delay-1">
-<div class="contact-card"><p class="eyebrow">Bidarahalli</p><h2 class="mt-3 text-2xl font-bold">M.G Convention Hall</h2><p class="mt-3 leading-7 text-black/60">Use the details below after adding the final business contact information in <code>js/config.js</code>.</p></div>
-<a data-phone-link href="#" class="contact-link"><span>Call</span><strong data-phone-text>+91 XXXXX XXXXX</strong></a>
-<a data-whatsapp-link href="#" class="contact-link"><span>WhatsApp</span><strong>Start a conversation →</strong></a>
-<a data-email-link href="#" class="contact-link"><span>Email</span><strong data-email-text>enquiries@example.com</strong></a>
-<div class="map-wrap"><iframe title="M.G Convention Hall Bidarahalli map" loading="lazy" src="https://www.google.com/maps?q=M.G%20Convention%20Hall%20Bidarahalli&output=embed"></iframe></div>
-</aside>
-</div></section>
+      <aside class="space-y-6 reveal delay-1">
+        <div class="contact-info-card">
+          <p class="section-kicker">Venue Location</p>
+          <h2 class="mt-2 text-2xl font-normal font-display">M.G Convention Hall</h2>
+          <p class="mt-3 text-sm leading-relaxed text-black/65" data-address>M.G Convention Hall, Bidarahalli, Bengaluru, Karnataka - 560049</p>
+        </div>
+
+        <div class="contact-action-pills">
+          <a data-phone-link href="#" class="contact-pill-link">
+            <div class="contact-pill-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div>
+              <span>Phone</span>
+              <strong data-phone-text>+91 XXXXX XXXXX</strong>
+            </div>
+          </a>
+          <a data-whatsapp-link href="#" class="contact-pill-link">
+            <div class="contact-pill-icon whatsapp-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </div>
+            <div>
+              <span>WhatsApp</span>
+              <strong>Start a conversation</strong>
+            </div>
+          </a>
+        </div>
+
+        <div class="map-wrap">
+          <iframe title="M.G Convention Hall Bidarahalli map" loading="lazy" src="https://www.google.com/maps?q=M.G%20Convention%20Hall%20Bidarahalli&output=embed"></iframe>
+        </div>
+      </aside>
+    </div>
+  </section>
 </main><div id="site-footer"></div><script src="../js/config.js"></script><script src="../js/components.js"></script><script src="../js/contact.js"></script><script src="../js/app.js"></script></body></html>
