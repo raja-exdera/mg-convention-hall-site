@@ -2,10 +2,13 @@
 (() => {
   const path = location.pathname;
   const prefix = path.includes("/pages/") ? "../" : "";
+  const isSubPage = path.includes("/pages/") || !document.querySelector(".lux-hero");
+  const isAbout = path.includes("about");
+  const isGallery = path.includes("gallery");
   const cfg = window.MG_CONFIG || {};
 
   const header = document.createElement("header");
-  header.className = "site-header";
+  header.className = `site-header ${isSubPage ? "header-dark-text" : ""}`;
   header.id = "site-header";
   header.innerHTML = `
     <div class="site-header-inner">
@@ -20,8 +23,8 @@
       </div>
 
       <nav class="nav-links header-center" aria-label="Primary navigation">
-        <a href="${prefix}pages/about.html">About</a>
-        <a href="${prefix}pages/gallery.html">Gallery</a>
+        <a href="${prefix}pages/about.html" class="${isAbout ? "active" : ""}">About</a>
+        <a href="${prefix}pages/gallery.html" class="${isGallery ? "active" : ""}">Gallery</a>
       </nav>
 
       <div class="header-right">
