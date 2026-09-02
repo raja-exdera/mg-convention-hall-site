@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Contact and enquiry for M.G Convention Hall, Bidarahalli.">
+<title>Contact & Enquiry | M.G Convention Hall</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script><script>tailwind.config={theme:{extend:{fontFamily:{sans:['DM Sans','sans-serif'],display:['Manrope','sans-serif']}}}}</script>
+<link rel="stylesheet" href="../css/styles.css"></head>
+<body class="bg-cream text-ink antialiased">
+<div id="site-header"></div>
+<main>
+<section class="page-title section-pad pb-10"><div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10"><p class="eyebrow reveal">Get in touch</p><h1 class="display-heading mt-4 max-w-4xl reveal">Tell us about your event.</h1><p class="mt-5 max-w-xl text-lg leading-8 text-black/60 reveal delay-1">Share the date, event type and what you need. The form can hand the enquiry directly to WhatsApp or email.</p></div></section>
+
+<section id="enquiry" class="pb-24"><div class="mx-auto grid max-w-7xl gap-6 px-5 sm:px-8 lg:grid-cols-[1.25fr_.75fr] lg:px-10">
+<form id="enquiry-form" class="form-card reveal">
+<div class="grid gap-5 sm:grid-cols-2">
+<label>Name<input required name="name" placeholder="Your name"></label>
+<label>Contact<input required name="contact" placeholder="Phone / WhatsApp"></label>
+<label>Date of Event<input required type="date" name="date"></label>
+<label>Type of Event<select required name="eventType"><option value="">Select</option><option>Wedding</option><option>Reception</option><option>Corporate Event</option><option>Conference</option><option>Birthday / Celebration</option><option>Other</option></select></label>
+<label class="sm:col-span-2">Message<textarea name="message" rows="6" placeholder="Tell us about guest count, rooms, dining or other requirements..."></textarea></label>
+</div>
+<button class="btn btn-dark mt-6 w-full sm:w-auto" type="submit">Send Enquiry <span>↗</span></button>
+<p id="form-status" class="mt-4 hidden text-sm font-semibold"></p>
+</form>
+
+<aside class="space-y-5 reveal delay-1">
+<div class="contact-card"><p class="eyebrow">Bidarahalli</p><h2 class="mt-3 text-2xl font-bold">M.G Convention Hall</h2><p class="mt-3 leading-7 text-black/60">Use the details below after adding the final business contact information in <code>js/config.js</code>.</p></div>
+<a data-phone-link href="#" class="contact-link"><span>Call</span><strong data-phone-text>+91 XXXXX XXXXX</strong></a>
+<a data-whatsapp-link href="#" class="contact-link"><span>WhatsApp</span><strong>Start a conversation →</strong></a>
+<a data-email-link href="#" class="contact-link"><span>Email</span><strong data-email-text>enquiries@example.com</strong></a>
+<div class="map-wrap"><iframe title="M.G Convention Hall Bidarahalli map" loading="lazy" src="https://www.google.com/maps?q=M.G%20Convention%20Hall%20Bidarahalli&output=embed"></iframe></div>
+</aside>
+</div></section>
+</main><div id="site-footer"></div><script src="../js/config.js"></script><script src="../js/components.js"></script><script src="../js/contact.js"></script><script src="../js/app.js"></script></body></html>
