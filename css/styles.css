@@ -1554,34 +1554,57 @@ button, input, select, textarea {
   text-transform: capitalize;
 }
 
-/* ABOUT PAGE: EDITORIAL INTRO WITH AMBIENT ANIMATION & DIVIDING BORDER */
+/* ABOUT PAGE: FULL SCREEN HERO (100VH) WITH ARCHITECTURAL ILLUSTRATION & INTERCONNECTING AXIS */
 .about-hero-section {
   position: relative;
-  overflow: hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  padding-top: clamp(120px, 14vw, 155px);
-  padding-bottom: clamp(40px, 5vw, 60px);
+  align-items: center;
+  padding: 100px 24px 60px;
+  overflow: hidden;
   background: var(--light-bg);
   border-bottom: 1px solid rgba(37, 40, 30, 0.1);
 }
 
-.about-hero-section .lux-container {
-  position: relative;
-  z-index: 2;
+.about-hero-illustration {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+  opacity: 0.92;
+}
+
+.about-arch-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arch-landscape-contours {
+  animation: subtleContourShift 22s ease-in-out infinite alternate;
+}
+
+@keyframes subtleContourShift {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
 }
 
 .about-hero-section::before {
   content: "";
   position: absolute;
-  top: -25%;
+  top: -20%;
   left: 10%;
   width: 580px;
   height: 580px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(84, 91, 69, 0.14) 0%, rgba(84, 91, 69, 0) 70%);
-  filter: blur(55px);
+  background: radial-gradient(circle, rgba(84, 91, 69, 0.12) 0%, rgba(84, 91, 69, 0) 70%);
+  filter: blur(60px);
   pointer-events: none;
   animation: floatAuraOne 14s ease-in-out infinite alternate;
 }
@@ -1589,13 +1612,13 @@ button, input, select, textarea {
 .about-hero-section::after {
   content: "";
   position: absolute;
-  bottom: -20%;
+  bottom: -15%;
   right: 12%;
   width: 540px;
   height: 540px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(212, 199, 171, 0.35) 0%, rgba(212, 199, 171, 0) 70%);
-  filter: blur(50px);
+  background: radial-gradient(circle, rgba(212, 199, 171, 0.3) 0%, rgba(212, 199, 171, 0) 70%);
+  filter: blur(55px);
   pointer-events: none;
   animation: floatAuraTwo 16s ease-in-out infinite alternate;
 }
@@ -1610,6 +1633,84 @@ button, input, select, textarea {
   0% { transform: translate(0, 0) scale(1); opacity: 0.65; }
   50% { transform: translate(-50px, -25px) scale(1.12); opacity: 1; }
   100% { transform: translate(25px, -35px) scale(0.9); opacity: 0.6; }
+}
+
+.about-hero-container {
+  position: relative;
+  z-index: 2;
+  margin-top: -20px;
+}
+
+/* INTERCONNECTING SCROLL AXIS CONNECTOR */
+.about-hero-connector {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.about-hero-connector:hover {
+  transform: translateX(-50%) translateY(4px);
+}
+
+.connector-label {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.connector-line {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(84, 91, 69, 0.28);
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  color: var(--primary);
+  box-shadow: 0 4px 14px -2px rgba(37, 40, 30, 0.08);
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.about-hero-connector:hover .connector-line {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+/* CONNECTING AXIS STEM ON NEXT SECTION */
+.concept-axis-connector {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1.5px;
+  height: 52px;
+  background: linear-gradient(180deg, rgba(84, 91, 69, 0.45) 0%, rgba(84, 91, 69, 0) 100%);
+  z-index: 3;
+}
+
+.concept-axis-connector::before {
+  content: "";
+  position: absolute;
+  top: -3.5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 0 3px rgba(84, 91, 69, 0.14);
 }
 
 .about-intro-copy {
