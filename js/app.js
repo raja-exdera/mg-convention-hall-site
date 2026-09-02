@@ -35,12 +35,32 @@
         // Scrolling DOWN -> hide header
         header.classList.add("header-hidden");
       } else if (currentScrollY < lastScrollY - 6) {
-        // Scrolling UP -> show header with glassmorphism #545B45
+        // Scrolling UP -> show header
         header.classList.remove("header-hidden");
       }
     }
 
     lastScrollY = currentScrollY;
+
+    // Dynamic Header Theme (White font over dark sections, Dark font over light sections)
+    const headerY = 42;
+    const darkElements = document.querySelectorAll(
+      ".lux-hero, .lux-section-dark, .page-hero-canvas, .garden-card-canvas, .site-footer, [data-theme='dark']"
+    );
+    let isOverDark = false;
+    for (const el of darkElements) {
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= headerY && rect.bottom >= headerY) {
+        isOverDark = true;
+        break;
+      }
+    }
+
+    if (isOverDark) {
+      header.classList.remove("header-dark-text");
+    } else {
+      header.classList.add("header-dark-text");
+    }
 
     const hero = document.querySelector("[data-parallax]");
     if (hero && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {

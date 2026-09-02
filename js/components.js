@@ -28,7 +28,7 @@
       </nav>
 
       <div class="header-right">
-        <a href="${prefix}pages/contact.html#enquiry" class="header-enquire-btn">
+        <a href="${prefix}pages/contact.html" class="header-enquire-btn">
           <span>Enquiry</span>
           <svg class="icon-arrow-diagonal" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
         </a>
@@ -42,7 +42,7 @@
       <a href="${prefix}index.html">Home</a>
       <a href="${prefix}pages/about.html">About</a>
       <a href="${prefix}pages/gallery.html">Gallery</a>
-      <a href="${prefix}pages/contact.html#enquiry" class="mobile-enquire-link">
+      <a href="${prefix}pages/contact.html" class="mobile-enquire-link">
         <span>Enquiry Now</span>
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
       </a>
