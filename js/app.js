@@ -5,10 +5,7 @@
 
   document.querySelectorAll("[data-phone-link]").forEach(a => a.href = cfg.phoneHref || "#");
   document.querySelectorAll("[data-phone-text]").forEach(el => el.textContent = cfg.phoneDisplay || "");
-  document.querySelectorAll("[data-email-link]").forEach(a => a.href = cfg.email ? `mailto:${cfg.email}` : "#");
-  document.querySelectorAll("[data-email-text]").forEach(el => el.textContent = cfg.email || "");
-
-  document.querySelectorAll("[data-address]").forEach(el => el.textContent = cfg.address || cfg.location || "Bidarahalli");
+  document.querySelectorAll("[data-address]").forEach(el => el.textContent = cfg.address || cfg.location || "M.G Convention Hall, Bidarahalli, Bengaluru");
 
   const mapQuery = cfg.mapsQuery || "M.G Convention Hall Bidarahalli";
   document.querySelectorAll("[data-map-link]").forEach(a => {
@@ -24,9 +21,26 @@
     if (wa !== "#") { a.target = "_blank"; a.rel = "noopener"; }
   });
 
+  let lastScrollY = window.scrollY;
+
   const onScroll = () => {
     if (!header) return;
-    header.classList.toggle("scrolled", window.scrollY > 30);
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY <= 20) {
+      header.classList.remove("scrolled", "header-hidden");
+    } else {
+      header.classList.add("scrolled");
+      if (currentScrollY > lastScrollY + 6 && currentScrollY > 100) {
+        // Scrolling DOWN -> hide header
+        header.classList.add("header-hidden");
+      } else if (currentScrollY < lastScrollY - 6) {
+        // Scrolling UP -> show header with glassmorphism #545B45
+        header.classList.remove("header-hidden");
+      }
+    }
+
+    lastScrollY = currentScrollY;
 
     const hero = document.querySelector("[data-parallax]");
     if (hero && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
