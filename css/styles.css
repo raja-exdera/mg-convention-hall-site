@@ -355,12 +355,32 @@ button, input, select, textarea {
   opacity: 0.88;
   transition: opacity 0.25s, transform 0.25s;
   position: relative;
+  padding-bottom: 5px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right center;
+  transition: transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   opacity: 1;
   transform: translateY(-1px);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  transform: scaleX(1);
+  transform-origin: left center;
 }
 
 .header-right {
@@ -1532,15 +1552,13 @@ button, input, select, textarea {
   text-transform: capitalize;
 }
 
-/* ABOUT PAGE: FULL HERO EDITORIAL INTRO */
+/* ABOUT PAGE: EDITORIAL INTRO */
 .about-hero-section {
-  min-height: 85vh;
-  min-height: 85dvh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 100px;
-  padding-bottom: 60px;
+  padding-top: clamp(120px, 14vw, 155px);
+  padding-bottom: clamp(36px, 5vw, 54px);
   background: var(--light-bg);
 }
 
