@@ -105,7 +105,7 @@ button, input, select, textarea {
   line-height: 1;
   letter-spacing: 0.16em;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--primary);
 }
 
@@ -265,14 +265,14 @@ button, input, select, textarea {
   transform: translateY(-100%);
 }
 
-/* When scrolling up: show header with #545B45 glassmorphism */
+/* When scrolling up: show header with normal frosted glassmorphism */
 .site-header.scrolled {
-  background: rgba(84, 91, 69, 0.88);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  background: rgba(18, 20, 15, 0.45);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
   color: #ffffff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
-  box-shadow: 0 12px 32px -10px rgba(37, 40, 30, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
 }
 
 .site-header-inner {
@@ -306,7 +306,7 @@ button, input, select, textarea {
   place-items: center;
   font-family: "Manrope", sans-serif;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.04em;
 }
 
@@ -320,7 +320,7 @@ button, input, select, textarea {
   font-family: "Manrope", sans-serif;
   font-size: 11px;
   line-height: 1;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: capitalize;
 }
@@ -348,7 +348,7 @@ button, input, select, textarea {
   line-height: 1;
   letter-spacing: 0.1em;
   text-transform: capitalize;
-  font-weight: 500;
+  font-weight: 450;
   opacity: 0.85;
   transition: opacity 0.25s, transform 0.25s;
   position: relative;
@@ -379,28 +379,29 @@ button, input, select, textarea {
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .header-enquire-btn:hover {
   background: var(--white);
-  color: var(--primary);
+  color: var(--dark);
   border-color: var(--white);
   transform: translateY(-2px);
   box-shadow: 0 6px 18px -4px rgba(0, 0, 0, 0.2);
 }
 
 .site-header.scrolled .header-enquire-btn {
-  background: #ffffff;
-  color: var(--primary);
-  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(8px);
 }
 
 .site-header.scrolled .header-enquire-btn:hover {
-  background: var(--dark);
-  color: #ffffff;
-  border-color: var(--dark);
+  background: #ffffff;
+  color: var(--dark);
+  border-color: #ffffff;
 }
 
 .menu-btn {
@@ -417,11 +418,13 @@ button, input, select, textarea {
   display: none;
 }
 
-/* 01 HERO SECTION (90VH HEIGHT, NO EXTRA KICKER, DECREASED H1, NO SCROLL BAR) */
+/* 01 HERO SECTION (FULL SCREEN BASED ON SCREEN: 100VH / 100DVH) */
 .lux-hero {
   position: relative;
-  min-height: 90vh;
-  height: 90vh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
   background: var(--dark);
   overflow: hidden;
   color: #fff;
@@ -457,14 +460,16 @@ button, input, select, textarea {
 .lux-hero-inner {
   position: relative;
   z-index: 2;
-  min-height: 90vh;
-  height: 90vh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
   width: min(1320px, calc(100% - 48px));
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 54px;
+  padding-bottom: 64px;
 }
 
 .hero-copy {
@@ -522,7 +527,7 @@ button, input, select, textarea {
   font-weight: 300;
 }
 
-/* 03 KEY HIGHLIGHTS — 4 TALL VERTICAL CARDS (SCREENSHOT 2 REPRODUCTION) */
+/* 03 KEY HIGHLIGHTS — 4 TALL VERTICAL CARDS (WEIGHT 500 AND BELOW) */
 .highlight-cards-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -578,16 +583,16 @@ button, input, select, textarea {
   font-size: 10.5px;
   letter-spacing: 0.18em;
   color: rgba(255, 255, 255, 0.65);
-  font-weight: 500;
+  font-weight: 400; /* 500 and below */
   margin-bottom: 8px;
 }
 
 .card-content-bottom h3 {
   margin: 0;
   font-family: "Manrope", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 24px;
+  font-weight: 450; /* 500 and below per user requirement */
+  letter-spacing: -0.01em;
   color: #ffffff;
 }
 
@@ -595,8 +600,8 @@ button, input, select, textarea {
   margin: 10px 0 0;
   font-size: 13px;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.78);
-  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 300; /* 500 and below */
 }
 
 /* 04 & 05 & 06 FEATURE SECTIONS */
