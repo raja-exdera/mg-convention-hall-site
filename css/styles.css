@@ -1577,7 +1577,9 @@ button, input, select, textarea {
   pointer-events: none;
   z-index: 1;
   overflow: hidden;
-  opacity: 1;
+  opacity: 0.85;
+  mask-image: radial-gradient(ellipse 72% 56% at 50% 46%, transparent 34%, black 78%);
+  -webkit-mask-image: radial-gradient(ellipse 72% 56% at 50% 46%, transparent 34%, black 78%);
 }
 
 .about-arch-svg {
@@ -1586,92 +1588,64 @@ button, input, select, textarea {
   object-fit: cover;
 }
 
-/* ACTIVE ANIMATIONS: FLOWING CONTOURS & SWAYING TREES */
-.contour-line-2 {
-  stroke-dasharray: 10 6;
-  animation: flowDash 18s linear infinite;
-}
-
-@keyframes flowDash {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: -200; }
-}
-
 .arch-landscape-contours {
-  animation: subtleContourShift 9s ease-in-out infinite alternate;
+  animation: subtleContourShift 22s ease-in-out infinite alternate;
 }
 
 @keyframes subtleContourShift {
   0% { transform: translateY(0); }
-  100% { transform: translateY(-14px); }
+  100% { transform: translateY(-10px); }
 }
 
-.arch-trees {
-  animation: swayTrees 7s ease-in-out infinite alternate;
-  transform-origin: bottom center;
-}
-
-@keyframes swayTrees {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(1deg); }
-}
-
-/* NOTICEABLE AMBIENT GLOWING AURA ANIMATION */
 .about-hero-section::before {
   content: "";
   position: absolute;
   top: -20%;
-  left: 8%;
-  width: 650px;
-  height: 650px;
+  left: 10%;
+  width: 580px;
+  height: 580px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(84, 91, 69, 0.24) 0%, rgba(84, 91, 69, 0) 70%);
-  filter: blur(65px);
+  background: radial-gradient(circle, rgba(84, 91, 69, 0.12) 0%, rgba(84, 91, 69, 0) 70%);
+  filter: blur(60px);
   pointer-events: none;
-  animation: floatAuraOne 9s ease-in-out infinite alternate;
+  animation: floatAuraOne 14s ease-in-out infinite alternate;
 }
 
 .about-hero-section::after {
   content: "";
   position: absolute;
   bottom: -15%;
-  right: 8%;
-  width: 600px;
-  height: 600px;
+  right: 12%;
+  width: 540px;
+  height: 540px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(212, 199, 171, 0.5) 0%, rgba(212, 199, 171, 0) 70%);
+  background: radial-gradient(circle, rgba(212, 199, 171, 0.3) 0%, rgba(212, 199, 171, 0) 70%);
   filter: blur(55px);
   pointer-events: none;
-  animation: floatAuraTwo 11s ease-in-out infinite alternate;
+  animation: floatAuraTwo 16s ease-in-out infinite alternate;
 }
 
 @keyframes floatAuraOne {
-  0% { transform: translate(0, 0) scale(1); opacity: 0.8; }
-  50% { transform: translate(50px, 30px) scale(1.2); opacity: 1; }
-  100% { transform: translate(-35px, 20px) scale(0.95); opacity: 0.85; }
+  0% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+  50% { transform: translate(45px, 25px) scale(1.15); opacity: 1; }
+  100% { transform: translate(-30px, 20px) scale(0.95); opacity: 0.75; }
 }
 
 @keyframes floatAuraTwo {
-  0% { transform: translate(0, 0) scale(1); opacity: 0.75; }
-  50% { transform: translate(-55px, -30px) scale(1.18); opacity: 1; }
-  100% { transform: translate(30px, -40px) scale(0.9); opacity: 0.7; }
+  0% { transform: translate(0, 0) scale(1); opacity: 0.65; }
+  50% { transform: translate(-50px, -25px) scale(1.12); opacity: 1; }
+  100% { transform: translate(25px, -35px) scale(0.9); opacity: 0.6; }
 }
 
 .about-hero-container {
   position: relative;
   z-index: 2;
+  margin-top: -10px;
 }
 
 .about-intro-copy {
   max-width: 860px;
   margin: 0 auto;
-  padding: 36px 42px;
-  border-radius: 28px;
-  background: rgba(248, 249, 247, 0.88);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(84, 91, 69, 0.14);
-  box-shadow: 0 20px 50px -15px rgba(37, 40, 30, 0.08);
 }
 
 .about-main-title {
