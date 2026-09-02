@@ -1577,7 +1577,9 @@ button, input, select, textarea {
   pointer-events: none;
   z-index: 1;
   overflow: hidden;
-  opacity: 0.92;
+  opacity: 0.85;
+  mask-image: radial-gradient(ellipse 72% 56% at 50% 46%, transparent 34%, black 78%);
+  -webkit-mask-image: radial-gradient(ellipse 72% 56% at 50% 46%, transparent 34%, black 78%);
 }
 
 .about-arch-svg {
@@ -1638,79 +1640,7 @@ button, input, select, textarea {
 .about-hero-container {
   position: relative;
   z-index: 2;
-  margin-top: -20px;
-}
-
-/* INTERCONNECTING SCROLL AXIS CONNECTOR */
-.about-hero-connector {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 4;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 7px;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.about-hero-connector:hover {
-  transform: translateX(-50%) translateY(4px);
-}
-
-.connector-label {
-  font-size: 10px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--primary);
-  font-weight: 600;
-  opacity: 0.85;
-}
-
-.connector-line {
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 1px solid rgba(84, 91, 69, 0.28);
-  background: #ffffff;
-  display: grid;
-  place-items: center;
-  color: var(--primary);
-  box-shadow: 0 4px 14px -2px rgba(37, 40, 30, 0.08);
-  transition: background 0.3s, color 0.3s, border-color 0.3s;
-}
-
-.about-hero-connector:hover .connector-line {
-  background: var(--primary);
-  color: #ffffff;
-  border-color: var(--primary);
-}
-
-/* CONNECTING AXIS STEM ON NEXT SECTION */
-.concept-axis-connector {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 1.5px;
-  height: 52px;
-  background: linear-gradient(180deg, rgba(84, 91, 69, 0.45) 0%, rgba(84, 91, 69, 0) 100%);
-  z-index: 3;
-}
-
-.concept-axis-connector::before {
-  content: "";
-  position: absolute;
-  top: -3.5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--primary);
-  box-shadow: 0 0 0 3px rgba(84, 91, 69, 0.14);
+  margin-top: -10px;
 }
 
 .about-intro-copy {
