@@ -98,8 +98,8 @@ For the final production build, replace Tailwind Play CDN with a compiled Tailwi
 7. Garden / Outdoor Area
 8. Facilities
 9. Gallery
-10. Location
-11. Enquiry / Contact
+10. Enquiry / Contact
+11. Location
 
 ## V2 visual system
 

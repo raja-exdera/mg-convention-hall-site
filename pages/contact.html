@@ -12,32 +12,165 @@
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
 <link rel="stylesheet" href="../css/styles.css"></head>
-<body class="antialiased">
+<body class="antialiased page-contact">
 <div id="site-header"></div>
 <main>
-  <section class="page-hero-wrapper">
-    <div class="lux-container">
-      <div class="page-hero-canvas">
-        <div class="page-hero-image">
-          <img src="../assets/images/landscape/landscape-16.jpg" alt="Arrival view of Saptha Aradhana Convention Hall">
-        </div>
-        <div class="page-hero-shade"></div>
-        <div class="page-hero-content text-center mx-auto reveal">
-          <p class="section-kicker light">Plan Your Occasion</p>
-          <h1 class="page-hero-title">Let's plan your day.<br><span>Your ceremony, our sacred promise.</span></h1>
-          <p class="page-hero-sub">Get in touch for bookings, date availability and a personalized venue walkthrough.</p>
-        </div>
+  <!-- 01 HERO (FULL SECTION LIKE HOMEPAGE HERO WITH CENTERED CONTENT & ARCHITECTURAL ILLUSTRATION) -->
+  <section class="lux-hero contact-lux-hero">
+    <div class="lux-hero-image" data-parallax>
+      <img src="../assets/images/landscape/landscape-16.jpg" alt="Arrival view of Saptha Aradhana Convention Hall">
+    </div>
+    <div class="contact-hero-gradient-overlay"></div>
+
+    <div class="lux-hero-inner contact-center-hero-inner">
+      <div class="contact-hero-center-content reveal">
+        <h1 class="contact-center-title">Let's plan your day.<br><span>Your ceremony, our sacred promise.</span></h1>
+        <p class="contact-center-sub">Get in touch for bookings, date availability and a personalized venue walkthrough of Saptha Aradhana Convention Hall.</p>
       </div>
     </div>
   </section>
 
-  <section id="enquiry" class="lux-section lux-section-cream">
+  <!-- ARCHITECTURAL VECTOR ILLUSTRATION BETWEEN SECTION 01 AND SECTION 02 -->
+  <div class="contact-between-divider" aria-hidden="true">
+    <svg class="contact-arch-svg" viewBox="0 0 1440 320" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="contactArchGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#CC9249" stop-opacity="0.15" />
+          <stop offset="25%" stop-color="#ded9cd" stop-opacity="0.65" />
+          <stop offset="50%" stop-color="#CC9249" stop-opacity="0.9" />
+          <stop offset="75%" stop-color="#ded9cd" stop-opacity="0.65" />
+          <stop offset="100%" stop-color="#CC9249" stop-opacity="0.15" />
+        </linearGradient>
+        <linearGradient id="contactWaveGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#CC9249" stop-opacity="0.08" />
+          <stop offset="50%" stop-color="#12372F" stop-opacity="0.75" />
+          <stop offset="100%" stop-color="#12372F" stop-opacity="1" />
+        </linearGradient>
+      </defs>
+
+      <!-- Soft architectural contour fills & waves -->
+      <path d="M 0 230 Q 360 150 720 210 T 1440 190 L 1440 320 L 0 320 Z" fill="url(#contactWaveGrad)" />
+      <path d="M 0 260 Q 320 200 720 240 T 1440 220 L 1440 320 L 0 320 Z" fill="#12372F" fill-opacity="0.85" />
+
+      <!-- Architectural Grand Canopy & Columns Linework -->
+      <g stroke="url(#contactArchGrad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+        <!-- Rooflines & Parapets -->
+        <path d="M 80 200 L 1360 200" />
+        <path d="M 240 170 L 1200 170" />
+        <path d="M 420 140 L 1020 140" stroke-width="1.6" />
+        
+        <!-- Center Ceremonial Arch / Mandap Dome -->
+        <path d="M 600 140 C 600 85 840 85 840 140" stroke-width="1.8" />
+        <circle cx="720" cy="80" r="5" fill="#CC9249" fill-opacity="0.85" />
+
+        <!-- Rhythmic Facade Pillars -->
+        <path d="M 420 140 L 420 280 M 500 170 L 500 280 M 580 170 L 580 280 M 660 140 L 660 280 M 780 140 L 780 280 M 860 170 L 860 280 M 940 170 L 940 280 M 1020 140 L 1020 280" stroke-dasharray="3 4" stroke-opacity="0.55" />
+        
+        <!-- Grand Steps & Plinth -->
+        <path d="M 360 240 L 1080 240" />
+        <path d="M 300 260 L 1140 260" />
+        <path d="M 220 280 L 1220 280" stroke-width="1.8" />
+
+        <!-- Organic Terraced Landscape Silhouette -->
+        <path d="M 0 210 Q 380 140 720 200 T 1440 170" stroke-width="1.6" stroke-opacity="0.85" />
+        <path d="M 0 240 Q 340 180 720 230 T 1440 200" stroke-width="1.3" stroke-opacity="0.65" />
+        <path d="M 0 270 Q 420 210 720 260 T 1440 230" stroke-width="1.6" stroke-opacity="0.45" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- 02 WAYS TO CONNECT (CONTACT CHANNELS WITH GRADIENT FINISH) -->
+  <section id="contact-channels" class="lux-section contact-channels-section">
     <div class="lux-container">
-      <div class="contact-equal-row">
-        <form id="enquiry-form" class="lux-form-light contact-form-stretch reveal">
-          <div class="form-card-header">
-            <h3>Event Booking & Enquiry</h3>
-            <p>Direct WhatsApp reservation & date availability check</p>
+      <div class="section-head reveal">
+        <div>
+          <p class="section-kicker light">02 / Ways to Connect</p>
+          <h2 class="section-title light">How can we help you<br>plan your occasion?</h2>
+        </div>
+        <p class="section-side-copy light-muted">Direct phone assistance, instant WhatsApp responses, and guided venue walkthroughs for your family.</p>
+      </div>
+
+      <div class="contact-channels-grid">
+        <a data-phone-link href="tel:+919916562870" class="contact-channel-card reveal">
+          <div class="contact-channel-top">
+            <span class="contact-channel-num">01 / Direct Call</span>
+            <div class="contact-channel-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+          </div>
+          <div>
+            <h3>Phone Booking</h3>
+            <p>Speak directly with our venue booking manager for auspicious date reservations & immediate queries.</p>
+          </div>
+          <div class="contact-channel-action">
+            <span data-phone-text>+91 99165 62870</span>
+            <svg class="icon-arrow-diagonal" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </div>
+        </a>
+
+        <a data-whatsapp-link href="#" class="contact-channel-card reveal delay-1">
+          <div class="contact-channel-top">
+            <span class="contact-channel-num">02 / Instant Chat</span>
+            <div class="contact-channel-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </div>
+          </div>
+          <div>
+            <h3>WhatsApp Support</h3>
+            <p>Quick chat for venue brochures, quote estimates, catering menu details & instant date checks.</p>
+          </div>
+          <div class="contact-channel-action">
+            <span>Start WhatsApp Chat</span>
+            <svg class="icon-arrow-diagonal" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </div>
+        </a>
+
+        <a data-map-link href="#" target="_blank" rel="noopener" class="contact-channel-card reveal delay-2">
+          <div class="contact-channel-top">
+            <span class="contact-channel-num">03 / Venue Visit</span>
+            <div class="contact-channel-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+          </div>
+          <div>
+            <h3>Venue Walkthrough</h3>
+            <p>Tour the grand convention hall, dining spaces, AC bridal suites, and outdoor grounds in Bidarahalli.</p>
+          </div>
+          <div class="contact-channel-action">
+            <span>Open in Google Maps</span>
+            <svg class="icon-arrow-diagonal" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </div>
+        </a>
+
+        <a href="#contact-booking" class="contact-channel-card reveal delay-3">
+          <div class="contact-channel-top">
+            <span class="contact-channel-num">04 / Online Booking</span>
+            <div class="contact-channel-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            </div>
+          </div>
+          <div>
+            <h3>Event Reservation</h3>
+            <p>Submit your preferred event date, guest count, and catering needs directly to our team below.</p>
+          </div>
+          <div class="contact-channel-action">
+            <span>Fill Booking Form</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 EVENT BOOKING & ENQUIRY FORM (FORM ONLY - FULL GRADIENT ENDING IN PURE WHITE) -->
+  <section id="contact-booking" class="contact-form-section">
+    <div class="lux-container">
+      <div class="contact-form-center-wrap">
+        <form id="enquiry-form" class="lux-form-light reveal">
+          <div class="form-card-header text-center mb-8">
+            <span class="form-kicker-pill">Direct Reservation</span>
+            <h2 class="form-main-title">Event Booking & Enquiry</h2>
+            <p class="form-sub-text">Direct WhatsApp reservation & date availability check</p>
           </div>
           <div class="form-row">
             <label>Full Name<input required name="name" placeholder="Your name"></label>
@@ -54,39 +187,6 @@
           </button>
           <p id="form-status" class="form-status hidden"></p>
         </form>
-
-        <div class="contact-right-col reveal delay-1">
-          <a data-map-link href="#" target="_blank" rel="noopener" class="contact-info-card block cursor-pointer transition hover:opacity-95" style="text-decoration:none;color:inherit;" aria-label="Open location in Google Maps">
-            <p class="section-kicker">Venue Location (Open in Maps)</p>
-            <h2 class="mt-2 text-2xl font-normal font-display">Saptha Aradhana Convention Hall</h2>
-            <p class="mt-2 text-sm leading-relaxed text-black/65" data-address>Address and location to be confirmed</p>
-          </a>
-
-          <div class="contact-action-pills">
-            <a data-phone-link href="#" class="contact-pill-link">
-              <div class="contact-pill-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              </div>
-              <div>
-                <span>Phone</span>
-                <strong data-phone-text>+91 XXXXX XXXXX</strong>
-              </div>
-            </a>
-            <a data-whatsapp-link href="#" class="contact-pill-link">
-              <div class="contact-pill-icon whatsapp-icon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-              </div>
-              <div>
-                <span>WhatsApp</span>
-                <strong>Start a conversation</strong>
-              </div>
-            </a>
-          </div>
-
-          <div class="contact-map-stretch">
-            <iframe title="Saptha Aradhana Convention Hall map" loading="lazy" src="https://www.google.com/maps?q=Saptha%20Aradhana%20Convention%20Hall&output=embed"></iframe>
-          </div>
-        </div>
       </div>
     </div>
   </section>

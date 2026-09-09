@@ -22,8 +22,9 @@
   });
 
   let lastScrollY = window.scrollY;
+  let ticking = false;
 
-  const onScroll = () => {
+  const updateScrollState = () => {
     if (!header) return;
     const currentScrollY = window.scrollY;
 
@@ -31,21 +32,25 @@
       header.classList.remove("scrolled", "header-hidden");
     } else {
       header.classList.add("scrolled");
-      if (currentScrollY > lastScrollY + 6 && currentScrollY > 100) {
-        // Scrolling DOWN -> hide header
-        header.classList.add("header-hidden");
-      } else if (currentScrollY < lastScrollY - 6) {
-        // Scrolling UP -> show header
-        header.classList.remove("header-hidden");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (!mobileMenu?.classList.contains("open")) {
+        const diff = currentScrollY - lastScrollY;
+        if (diff > 8 && currentScrollY > 120) {
+          // Scrolling DOWN -> hide header
+          header.classList.add("header-hidden");
+        } else if (diff < -8) {
+          // Scrolling UP -> show header
+          header.classList.remove("header-hidden");
+        }
       }
     }
 
     lastScrollY = currentScrollY;
 
-    // Dynamic Header Theme (White font over dark sections, Dark font over light sections)
-    const headerY = 42;
+    // Dynamic Header Theme (Opposite contrast: light nav over dark sections, dark nav over light sections)
+    const headerY = 50;
     const darkElements = document.querySelectorAll(
-      ".lux-hero, .lux-section-dark, .page-hero-canvas, .garden-card-canvas, .site-footer, [data-theme='dark']"
+      ".lux-hero, .lux-section-dark, .page-hero-canvas, .site-footer, [data-theme='dark']"
     );
     let isOverDark = false;
     for (const el of darkElements) {
@@ -56,10 +61,24 @@
       }
     }
 
-    if (isOverDark) {
-      header.classList.remove("header-dark-text");
+    if (currentScrollY <= 20) {
+      // At top (transparent header):
+      // Only index.html has a full bleed dark hero (.lux-hero) from top 0
+      const isFullBleedDarkHero = document.querySelector(".lux-hero");
+      if (isFullBleedDarkHero) {
+        header.classList.remove("header-dark-text");
+      } else {
+        header.classList.add("header-dark-text");
+      }
     } else {
-      header.classList.add("header-dark-text");
+      // While scrolled (floating pill):
+      // Over dark bg -> nav in LIGHT theme (white glass pill, dark text)
+      // Over light bg -> nav in DARK theme (dark pine glass pill, white text)
+      if (isOverDark) {
+        header.classList.add("header-dark-text");
+      } else {
+        header.classList.remove("header-dark-text");
+      }
     }
 
     const hero = document.querySelector("[data-parallax]");
@@ -71,9 +90,19 @@
       const y = Math.max(-30, Math.min(30, (window.scrollY - garden.offsetTop) * .018));
       garden.style.transform = `translate3d(0,${y}px,0) scale(1.06)`;
     }
+
+    ticking = false;
   };
-  window.addEventListener("scroll", onScroll, {passive:true});
-  onScroll();
+
+  const onScroll = () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateScrollState);
+      ticking = true;
+    }
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  updateScrollState();
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

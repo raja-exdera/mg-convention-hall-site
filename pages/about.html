@@ -1,178 +1,207 @@
 <!doctype html>
-<html lang="en"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="About Saptha Aradhana Convention Hall.">
-<title>About | Saptha Aradhana Convention Hall</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script><script>tailwind.config={theme:{extend:{fontFamily:{sans:['Plus Jakarta Sans','sans-serif'],display:['Instrument Serif','serif']}}}}</script>
-<link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/svg+xml" href="../favicon.svg">
-<link rel="shortcut icon" href="../favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="manifest" href="../site.webmanifest">
-<link rel="stylesheet" href="../css/styles.css"></head>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="About Saptha Aradhana Convention Hall.">
+  <title>About | Saptha Aradhana Convention Hall</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { theme: { extend: { fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'], display: ['Instrument Serif', 'serif'] } } } }</script>
+  <link rel="icon" type="image/png" href="../favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
 <body class="antialiased">
-<div id="site-header"></div>
-<main>
-  <!-- 01 ABOUT HERO: FULL SCREEN WITH ARCHITECTURAL VECTOR ILLUSTRATION -->
-  <section class="about-hero-section">
-    <!-- Architectural Linework Illustration Background -->
-    <div class="about-hero-illustration" aria-hidden="true">
-      <svg class="about-arch-svg" viewBox="0 0 1440 900" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="archGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#545B45" stop-opacity="0.18"/>
-            <stop offset="50%" stop-color="#545B45" stop-opacity="0.09"/>
-            <stop offset="100%" stop-color="#25281E" stop-opacity="0.22"/>
-          </linearGradient>
-          <linearGradient id="lineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#545B45" stop-opacity="0.05"/>
-            <stop offset="70%" stop-color="#545B45" stop-opacity="0.28"/>
-            <stop offset="100%" stop-color="#545B45" stop-opacity="0.55"/>
-          </linearGradient>
-          <pattern id="archGrid" width="64" height="64" patternUnits="userSpaceOnUse">
-            <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#545B45" stroke-width="0.75" stroke-opacity="0.06"/>
-          </pattern>
-        </defs>
+  <div id="site-header"></div>
+  <main>
+    <!-- 01 ABOUT HERO: FULL SCREEN WITH ARCHITECTURAL VECTOR ILLUSTRATION -->
+    <section class="about-hero-section">
+      <!-- Architectural Linework Illustration Background -->
+      <div class="about-hero-illustration" aria-hidden="true">
+        <svg class="about-arch-svg" viewBox="0 0 1440 900" fill="none" preserveAspectRatio="xMidYMid slice"
+          xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="archGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#545B45" stop-opacity="0.18" />
+              <stop offset="50%" stop-color="#545B45" stop-opacity="0.09" />
+              <stop offset="100%" stop-color="#25281E" stop-opacity="0.22" />
+            </linearGradient>
+            <linearGradient id="lineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#545B45" stop-opacity="0.05" />
+              <stop offset="70%" stop-color="#545B45" stop-opacity="0.28" />
+              <stop offset="100%" stop-color="#545B45" stop-opacity="0.55" />
+            </linearGradient>
+            <pattern id="archGrid" width="64" height="64" patternUnits="userSpaceOnUse">
+              <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#545B45" stroke-width="0.75" stroke-opacity="0.06" />
+            </pattern>
+          </defs>
 
-        <!-- Drafting grid -->
-        <rect width="100%" height="100%" fill="url(#archGrid)" />
+          <!-- Drafting grid -->
+          <rect width="100%" height="100%" fill="url(#archGrid)" />
 
-        <!-- M.G Convention Centre Architectural Silhouette (Positioned cleanly at base below text) -->
-        <g class="arch-facade-lines" stroke="url(#archGrad)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-          <!-- Main Hall Roofline & Parapet -->
-          <path d="M 80 720 L 1360 720 M 200 680 L 1240 680 M 200 680 L 200 720 M 1240 680 L 1240 720" />
-          <!-- Entry Grand Canopy & Portal -->
-          <path d="M 520 720 L 520 630 L 920 630 L 920 720" stroke-width="1.8" />
-          <path d="M 480 630 L 960 630" stroke-width="2.2" />
-          <!-- Rhythmic Facade Louvers / Pillars -->
-          <path d="M 260 720 L 260 840 M 320 720 L 320 840 M 380 720 L 380 840 M 440 720 L 440 840 M 500 720 L 500 840 M 940 720 L 940 840 M 1000 720 L 1000 840 M 1060 720 L 1060 840 M 1120 720 L 1120 840 M 1180 720 L 1180 840" stroke-dasharray="3 3" />
-          <!-- Foundation Baseline -->
-          <path d="M 40 840 L 1400 840" stroke-width="1.6" />
-        </g>
+          <!-- M.G Convention Centre Architectural Silhouette (Positioned cleanly at base below text) -->
+          <g class="arch-facade-lines" stroke="url(#archGrad)" stroke-width="1.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <!-- Main Hall Roofline & Parapet -->
+            <path d="M 80 720 L 1360 720 M 200 680 L 1240 680 M 200 680 L 200 720 M 1240 680 L 1240 720" />
+            <!-- Entry Grand Canopy & Portal -->
+            <path d="M 520 720 L 520 630 L 920 630 L 920 720" stroke-width="1.8" />
+            <path d="M 480 630 L 960 630" stroke-width="2.2" />
+            <!-- Rhythmic Facade Louvers / Pillars -->
+            <path
+              d="M 260 720 L 260 840 M 320 720 L 320 840 M 380 720 L 380 840 M 440 720 L 440 840 M 500 720 L 500 840 M 940 720 L 940 840 M 1000 720 L 1000 840 M 1060 720 L 1060 840 M 1120 720 L 1120 840 M 1180 720 L 1180 840"
+              stroke-dasharray="3 3" />
+            <!-- Foundation Baseline -->
+            <path d="M 40 840 L 1400 840" stroke-width="1.6" />
+          </g>
 
-        <!-- Landscape Contours / Lawn Curves -->
-        <g class="arch-landscape-contours" stroke="#545B45" stroke-opacity="0.14" stroke-width="1.2" fill="none">
-          <path d="M -50 820 Q 280 730 640 810 T 1320 770 T 1500 850" />
-          <path d="M -50 860 Q 320 770 720 850 T 1400 810 T 1520 890" stroke-opacity="0.09" />
-        </g>
-      </svg>
-    </div>
-
-    <!-- Centered Editorial Content (Pristine clean background) -->
-    <div class="lux-container text-center about-hero-container">
-      <div class="about-intro-copy reveal">
-        <h1 class="about-main-title">Where tradition meets<br><span>comfort and care.</span></h1>
-        <p class="about-main-sub">Saptha Aradhana Convention Hall brings together a spacious hall, modern amenities, comfortable guest rooms and warm hospitality for life's most meaningful celebrations.</p>
-        
-        <div class="about-feature-tags">
-          <span>Grand Convention Hall</span>
-          <span>500-1000 Guests</span>
-          <span>Stage & Mandapam</span>
-          <span>3-Star Hospitality</span>
-          <span>Spacious Parking</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 02 CONCEPT -->
-  <section id="concept" class="lux-section lux-section-cream">
-    <div class="lux-container split-intro">
-      <div class="reveal">
-        <p class="section-kicker">01 / Concept</p>
-        <h2 class="section-title">A sacred venue for every meaningful celebration.</h2>
-      </div>
-      <div class="intro-copy reveal delay-1">
-        <p>From traditional Telugu weddings to intimate family gatherings and corporate events, Saptha Aradhana provides a space where memories are created with dignity and warmth.</p>
-        <p class="muted">Our venue is thoughtfully designed for large gatherings while maintaining comfort, elegant flow and gracious hospitality for every guest.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="lux-section lux-section-dark">
-    <div class="lux-container">
-      <div class="section-head reveal">
-        <div>
-          <p class="section-kicker light">02 / What the spaces offer</p>
-          <h2 class="section-title light">Spaces that support the event before, during and after the main moment.</h2>
-        </div>
+          <!-- Landscape Contours / Lawn Curves -->
+          <g class="arch-landscape-contours" stroke="#545B45" stroke-opacity="0.14" stroke-width="1.2" fill="none">
+            <path d="M -50 820 Q 280 730 640 810 T 1320 770 T 1500 850" />
+            <path d="M -50 860 Q 320 770 720 850 T 1400 810 T 1520 890" stroke-opacity="0.09" />
+          </g>
+        </svg>
       </div>
 
-      <div class="about-cards-grid mt-12">
-        <div class="about-feature-card reveal">
-          <span class="about-card-num">01</span>
-          <h3>Convention Hall</h3>
-          <p>A fully air-conditioned venue made for weddings, receptions and cultural gatherings.</p>
-        </div>
-        <div class="about-feature-card reveal delay-1">
-          <span class="about-card-num">02</span>
-          <h3>Dining & Hospitality</h3>
-          <p>A spacious dining environment and warm service for every family gathering.</p>
-        </div>
-        <div class="about-feature-card reveal delay-2">
-          <span class="about-card-num">03</span>
-          <h3>Rooms & Suites</h3>
-          <p>Comfortable A/C rooms for wedding families, guests and corporate visitors.</p>
-        </div>
-        <div class="about-feature-card reveal delay-3">
-          <span class="about-card-num">04</span>
-          <h3>Event Support</h3>
-          <p>Parking, power backup, security and professional support around your occasion.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Centered Editorial Content (Pristine clean background) -->
+      <div class="lux-container text-center about-hero-container">
+        <div class="about-intro-copy reveal">
+          <h1 class="about-main-title">Where tradition meets<br><span>comfort and care.</span></h1>
+          <p class="about-main-sub">Saptha Aradhana Convention Hall brings together a spacious hall, modern amenities,
+            comfortable guest rooms and warm hospitality for life's most meaningful celebrations.</p>
 
-  <section class="lux-section lux-section-cream">
-    <div class="lux-container">
-      <p class="section-kicker reveal">03 / Visual character</p>
-      <h2 class="section-title reveal">Warmth, restraint & nature.</h2>
-      
-      <div class="visual-trio-grid mt-10">
-        <figure class="visual-card reveal">
-          <img src="../assets/images/rooms/room-12.jpg" alt="Reception interior" loading="lazy">
-          <figcaption>
-            <strong>Warm Reception</strong>
-            <span>Welcoming arrival foyer with natural finishes</span>
-          </figcaption>
-        </figure>
-        <figure class="visual-card reveal delay-1">
-          <img src="../assets/images/rooms/room-23.jpg" alt="Bride room" loading="lazy">
-          <figcaption>
-            <strong>Private Room Stay</strong>
-            <span>Dedicated bridal suite with serene comforts</span>
-          </figcaption>
-        </figure>
-        <figure class="visual-card reveal delay-2">
-          <img src="../assets/images/landscape/landscape-15.jpg" alt="Garden pavilion" loading="lazy">
-          <figcaption>
-            <strong>Landscaped Outdoor Spaces</strong>
-            <span>Sheltered pavilions set amidst green lawns</span>
-          </figcaption>
-        </figure>
+          <div class="about-feature-tags">
+            <span>Grand Convention Hall</span>
+            <span>500-1000 Guests</span>
+            <span>Stage & Mandapam</span>
+            <span>3-Star Hospitality</span>
+            <span>Spacious Parking</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="lux-section-compact pb-24">
-    <div class="lux-container">
-      <div class="about-cta-canvas reveal" data-theme="dark">
-        <div class="cta-canvas-image">
-          <img src="../assets/images/landscape/landscape-26.jpg" alt="Saptha Aradhana Convention Hall exterior" loading="lazy">
+    <!-- 02 CONCEPT -->
+    <section id="concept" class="lux-section lux-section-cream">
+      <div class="lux-container split-intro">
+        <div class="reveal">
+          <p class="section-kicker">01 / Concept</p>
+          <h2 class="section-title">A sacred venue for every meaningful celebration.</h2>
         </div>
-        <div class="cta-canvas-shade"></div>
-        <div class="cta-canvas-content text-center">
-          <p class="section-kicker light">Next Step</p>
-          <h2 class="section-title light text-center mx-auto">See the spaces in detail.</h2>
-          <p class="light-muted max-w-lg mx-auto mt-4">Explore our comprehensive gallery of architectural and interior visualizations.</p>
-          <a href="gallery.html" class="lux-btn lux-btn-solid mt-8 inline-flex">
-            <span>Open Gallery</span>
-            <svg class="icon-arrow-diagonal" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-          </a>
+        <div class="intro-copy reveal delay-1">
+          <p>From traditional weddings to intimate family gatherings and corporate events, Saptha Aradhana provides a
+            space where memories are created with dignity and warmth.</p>
+          <p class="muted">Our venue is thoughtfully designed for large gatherings while maintaining comfort, elegant
+            flow and gracious hospitality for every guest.</p>
         </div>
       </div>
-    </div>
-  </section>
-</main><div id="site-footer"></div><script src="../js/config.js"></script><script src="../js/components.js"></script><script src="../js/app.js"></script></body></html>
+    </section>
+
+    <section class="lux-section lux-section-dark">
+      <div class="lux-container">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker light">02 / What the spaces offer</p>
+            <h2 class="section-title light">Spaces that support the event before, during and after the main moment.</h2>
+          </div>
+        </div>
+
+        <div class="about-cards-grid mt-12">
+          <div class="about-feature-card reveal">
+            <span class="about-card-num">01</span>
+            <h3>Convention Hall</h3>
+            <p>A fully air-conditioned venue made for weddings, receptions and cultural gatherings.</p>
+          </div>
+          <div class="about-feature-card reveal delay-1">
+            <span class="about-card-num">02</span>
+            <h3>Dining & Hospitality</h3>
+            <p>A spacious dining environment and warm service for every family gathering.</p>
+          </div>
+          <div class="about-feature-card reveal delay-2">
+            <span class="about-card-num">03</span>
+            <h3>Rooms & Suites</h3>
+            <p>Comfortable A/C rooms for wedding families, guests and corporate visitors.</p>
+          </div>
+          <div class="about-feature-card reveal delay-3">
+            <span class="about-card-num">04</span>
+            <h3>Event Support</h3>
+            <p>Parking, power backup, security and professional support around your occasion.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lux-section lux-section-cream">
+      <div class="lux-container">
+        <p class="section-kicker reveal">03 / Visual character</p>
+        <h2 class="section-title reveal">Warmth, restraint & nature.</h2>
+
+        <div class="visual-trio-grid mt-10">
+          <figure class="visual-card reveal">
+            <img src="../assets/images/rooms/room-12.jpg" alt="Reception interior" loading="lazy">
+            <figcaption>
+              <strong>Warm Reception</strong>
+              <span>Welcoming arrival foyer with natural finishes</span>
+            </figcaption>
+          </figure>
+          <figure class="visual-card reveal delay-1">
+            <img src="../assets/images/rooms/room-23.jpg" alt="Bride room" loading="lazy">
+            <figcaption>
+              <strong>Private Room Stay</strong>
+              <span>Dedicated bridal suite with serene comforts</span>
+            </figcaption>
+          </figure>
+          <figure class="visual-card reveal delay-2">
+            <img src="../assets/images/landscape/landscape-15.jpg" alt="Garden pavilion" loading="lazy">
+            <figcaption>
+              <strong>Landscaped Outdoor Spaces</strong>
+              <span>Sheltered pavilions set amidst green lawns</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="lux-section-compact pb-24">
+      <div class="lux-container">
+        <div class="about-cta-canvas reveal" data-theme="dark">
+          <div class="cta-canvas-image">
+            <img src="../assets/images/landscape/landscape-26.jpg" alt="Saptha Aradhana Convention Hall exterior"
+              loading="lazy">
+          </div>
+          <div class="cta-canvas-shade"></div>
+          <div class="cta-canvas-content text-center">
+            <p class="section-kicker light">Next Step</p>
+            <h2 class="section-title light text-center mx-auto">See the spaces in detail.</h2>
+            <p class="light-muted max-w-lg mx-auto mt-4">Explore our comprehensive gallery of architectural and interior
+              visualizations.</p>
+            <a href="gallery.html" class="lux-btn lux-btn-solid mt-8 inline-flex">
+              <span>Open Gallery</span>
+              <svg class="icon-arrow-diagonal" width="13" height="13" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="../js/config.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+
+</html>
