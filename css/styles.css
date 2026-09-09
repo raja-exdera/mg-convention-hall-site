@@ -331,9 +331,16 @@ button, input, select, textarea {
   width: auto;
   object-fit: contain;
   margin-left: -60px;
-  margin-top: 14px;
   display: block;
   transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.brand-logo-text-light {
+  margin-top: 14px;
+}
+
+.brand-logo-text-dark {
+  margin-top: 8px;
 }
 
 .brand:hover .brand-logo-text {
@@ -1364,10 +1371,12 @@ button, input, select, textarea {
 }
 
 .footer-brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin-bottom: 24px;
+  margin-left: -12px;
   text-decoration: none;
+  width: fit-content;
 }
 
 .footer-logo-img {
@@ -1385,12 +1394,17 @@ button, input, select, textarea {
 }
 
 .footer-logo-text {
-  height: 84px;
+  height: 90px;
   width: auto;
   object-fit: contain;
   margin-left: -60px;
-  margin-top: 4px;
+  margin-top: 14px;
   display: block;
+  transition: transform 0.25s ease;
+}
+
+.footer-brand:hover .footer-logo-text {
+  transform: translateX(2px);
 }
 
 .footer-statement {
@@ -2100,7 +2114,24 @@ button, input, select, textarea {
     height: 70px;
     width: auto;
     margin-left: -40px;
-    margin-top: 3px;
+  }
+  .brand-logo-text-light {
+    margin-top: 10px;
+  }
+  .brand-logo-text-dark {
+    margin-top: 6px;
+  }
+  .footer-brand {
+    margin-left: 0;
+  }
+  .footer-logo-img {
+    height: 48px;
+    width: 48px;
+  }
+  .footer-logo-text {
+    height: 70px;
+    margin-left: -40px;
+    margin-top: 10px;
   }
   .header-center { display: none; }
   .menu-btn { display: block; }
