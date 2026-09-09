@@ -13,7 +13,7 @@
   });
   document.querySelectorAll("[data-whatsapp-link]").forEach(el => {
     if (cfg.whatsappNumber) {
-      el.href = `https://wa.me/${cfg.whatsappNumber}?text=${encodeURIComponent("Hello! I would like to enquire about M.G Convention Hall.")}`;
+      el.href = `https://wa.me/${cfg.whatsappNumber}?text=${encodeURIComponent(`Hello! I would like to enquire about ${cfg.venueName || "Saptha Aradhana Convention Hall"}.`)}`;
       el.target = "_blank";
       el.rel = "noopener";
     }
@@ -36,7 +36,7 @@
 
     const data = new FormData(form);
     const message = [
-      `*New Event Enquiry — ${cfg.venueName || "M.G Convention Hall"}*`,
+      `*New Event Enquiry — ${cfg.venueName || "Saptha Aradhana Convention Hall"}*`,
       ``,
       `*Name:* ${data.get("name")}`,
       `*Contact:* ${data.get("contact")}`,

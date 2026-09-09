@@ -5,15 +5,15 @@
 
   document.querySelectorAll("[data-phone-link]").forEach(a => a.href = cfg.phoneHref || "#");
   document.querySelectorAll("[data-phone-text]").forEach(el => el.textContent = cfg.phoneDisplay || "");
-  document.querySelectorAll("[data-address]").forEach(el => el.textContent = cfg.address || cfg.location || "M.G Convention Hall, Bidarahalli, Bengaluru");
+  document.querySelectorAll("[data-address]").forEach(el => el.textContent = cfg.address || cfg.location || "Address and location to be confirmed");
 
-  const mapQuery = cfg.mapsQuery || "M.G Convention Hall Bidarahalli";
+  const mapQuery = cfg.mapsQuery || "Saptha Aradhana Convention Hall";
   document.querySelectorAll("[data-map-link]").forEach(a => {
     a.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
   });
 
   const wa = cfg.whatsappNumber && !cfg.whatsappNumber.includes("X")
-    ? `https://wa.me/${cfg.whatsappNumber}?text=${encodeURIComponent(`Hello, I would like to enquire about ${cfg.venueName || "M.G Convention Hall"}.`)}`
+    ? `https://wa.me/${cfg.whatsappNumber}?text=${encodeURIComponent(`Hello, I would like to enquire about ${cfg.venueName || "Saptha Aradhana Convention Hall"}.`)}`
     : "#";
 
   document.querySelectorAll("[data-whatsapp-link]").forEach(a => {
@@ -89,10 +89,46 @@
   const mobileMenu = document.getElementById("mobile-menu");
   menuBtn?.addEventListener("click", () => {
     const open = mobileMenu?.classList.toggle("open");
+    menuBtn.classList.toggle("is-open", !!open);
     menuBtn.setAttribute("aria-expanded", String(!!open));
   });
   mobileMenu?.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
     mobileMenu.classList.remove("open");
+    menuBtn?.classList.remove("is-open");
     menuBtn?.setAttribute("aria-expanded", "false");
   }));
+
+  // Clean URL smooth scrolling: do not expose or keep #hashes (like #highlights) in the browser URL
+  document.addEventListener("click", e => {
+    const link = e.target.closest("a");
+    if (!link) return;
+    const href = link.getAttribute("href");
+    if (!href || !href.includes("#")) return;
+
+    try {
+      const targetUrl = new URL(link.href, window.location.href);
+      if (targetUrl.origin === window.location.origin && targetUrl.pathname === window.location.pathname && targetUrl.hash) {
+        const targetEl = document.querySelector(targetUrl.hash);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+          if (window.location.hash) {
+            history.replaceState(null, "", window.location.pathname + window.location.search);
+          }
+        }
+      }
+    } catch (_) {}
+  });
+
+  // Handle cross-page section navigation cleanly: if URL has a hash on load, scroll to it and remove hash from address bar
+  if (window.location.hash) {
+    const hash = window.location.hash;
+    const targetEl = document.querySelector(hash);
+    history.replaceState(null, "", window.location.pathname + window.location.search);
+    if (targetEl) {
+      setTimeout(() => {
+        targetEl.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 100);
+    }
+  }
 })();
