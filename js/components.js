@@ -25,14 +25,13 @@
       <nav class="nav-links header-center" aria-label="Primary navigation">
         <a href="${prefix}index.html" class="${isHome ? "active" : ""}">Home</a>
         <a href="${prefix}pages/about.html" class="${isAbout ? "active" : ""}">About</a>
-        <a href="${prefix}index.html#highlights" data-nav-space>Spaces</a>
         <a href="${prefix}pages/gallery.html" class="${isGallery ? "active" : ""}">Gallery</a>
       </nav>
 
       <div class="header-right">
         <a href="${prefix}pages/contact.html" class="header-enquire-btn">
           <span>Enquiry</span>
-          <svg class="icon-arrow-diagonal" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          <svg class="icon-arrow-action" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
         <button class="menu-btn" id="menu-btn" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
@@ -41,11 +40,10 @@
     <div class="mobile-menu" id="mobile-menu">
       <a href="${prefix}index.html">Home</a>
       <a href="${prefix}pages/about.html">About</a>
-      <a href="${prefix}index.html#highlights" data-nav-space>Spaces</a>
       <a href="${prefix}pages/gallery.html">Gallery</a>
       <a href="${prefix}pages/contact.html" class="mobile-enquire-link">
         <span>Enquiry Now</span>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        <svg class="icon-arrow-action" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
     </div>
   `;
@@ -67,9 +65,8 @@
         <div class="footer-mid-col footer-col-links">
           <nav class="footer-nav-list" aria-label="Footer navigation">
             <a class="footer-link-item" href="${prefix}index.html">Home</a>
-            <a class="footer-link-item" href="${prefix}pages/about.html">About </a>
-            <a class="footer-link-item" href="${prefix}index.html#highlights"> Spaces</a>
-            <a class="footer-link-item" href="${prefix}pages/gallery.html"> Gallery</a>
+            <a class="footer-link-item" href="${prefix}pages/about.html">About</a>
+            <a class="footer-link-item" href="${prefix}pages/gallery.html">Gallery</a>
             <a class="footer-link-item" href="${prefix}pages/contact.html">Contact Us</a>
           </nav>
         </div>
