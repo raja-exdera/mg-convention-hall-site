@@ -7,10 +7,18 @@
   document.querySelectorAll("[data-phone-text]").forEach(el => el.textContent = cfg.phoneDisplay || "");
   document.querySelectorAll("[data-address]").forEach(el => el.textContent = cfg.address || cfg.location || "Address and location to be confirmed");
 
-  const mapQuery = cfg.mapsQuery || "Saptha Aradhana Convention Hall";
+  const mapUrl = cfg.mapDirectUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cfg.mapsQuery || "APSARA CONVENTION HALL")}`;
   document.querySelectorAll("[data-map-link]").forEach(a => {
-    a.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
+    a.href = mapUrl;
+    a.target = "_blank";
+    a.rel = "noopener";
   });
+
+  if (cfg.mapEmbedSrc) {
+    document.querySelectorAll(".map-wrap iframe").forEach(iframe => {
+      iframe.src = cfg.mapEmbedSrc;
+    });
+  }
 
   const wa = cfg.whatsappNumber && !cfg.whatsappNumber.includes("X")
     ? `https://wa.me/${cfg.whatsappNumber}?text=${encodeURIComponent(`Hello, I would like to enquire about ${cfg.venueName || "Saptha Aradhana Convention Hall"}.`)}`

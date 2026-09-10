@@ -54,47 +54,63 @@
   footer.className = "site-footer";
   footer.innerHTML = `
     <div class="footer-inner">
-      <div class="footer-grid">
-        <div class="footer-col-brand">
+      <div class="footer-mid-grid">
+        <div class="footer-mid-col footer-col-intro">
           <a class="footer-brand" href="${prefix}index.html" aria-label="${cfg.venueName || "Saptha Aradhana Convention Hall"}">
             <img src="${prefix}assets/logo.png" alt="Saptha Aradhana Emblem" class="footer-logo-img">
             <img src="${prefix}assets/logo-light-text.png" alt="Saptha Aradhana" class="footer-logo-text">
           </a>
-          <div class="footer-statement">Your Ceremony.<br>Our Sacred Promise.</div>
-          <p class="footer-sub">Saptha Aradhana Convention Hall - where tradition, comfort and hospitality come together.</p>
+          <p class="footer-tagline-text">Your Ceremony.<br>Our Sacred Promise.</p>
+          <p class="footer-desc-text">Where heritage, majestic celebration spaces, and heartfelt hospitality unite in Bengaluru.</p>
         </div>
-        <div class="footer-col-nav">
-          <p class="footer-label">Explore</p>
-          <a class="footer-link" href="${prefix}index.html">Home</a>
-          <a class="footer-link" href="${prefix}pages/about.html">About</a>
-          <a class="footer-link" href="${prefix}index.html#highlights">Spaces</a>
-          <a class="footer-link" href="${prefix}pages/gallery.html">Gallery</a>
-          <a class="footer-link" href="${prefix}index.html#location">Location</a>
+
+        <div class="footer-mid-col footer-col-links">
+          <nav class="footer-nav-list" aria-label="Footer navigation">
+            <a class="footer-link-item" href="${prefix}index.html">Home</a>
+            <a class="footer-link-item" href="${prefix}pages/about.html">About </a>
+            <a class="footer-link-item" href="${prefix}index.html#highlights"> Spaces</a>
+            <a class="footer-link-item" href="${prefix}pages/gallery.html"> Gallery</a>
+            <a class="footer-link-item" href="${prefix}pages/contact.html">Contact Us</a>
+          </nav>
         </div>
-        <div class="footer-col-address">
-          <p class="footer-label">Address</p>
-          <a data-map-link href="#" target="_blank" rel="noopener" class="footer-address-link" style="text-decoration:none;color:inherit;" aria-label="Open address in Google Maps">
-            <p class="footer-address-text">${cfg.address || "Address and location to be confirmed"}</p>
+
+        <div class="footer-mid-col footer-col-venue-info">
+          <p class="footer-title">Address</p>
+          <p class="footer-address-line">${cfg.address || "2,3, No. 41/1, 4, Annapoorneshwari Nagar, Health Layout, Srigandadakaval, Bengaluru, Karnataka 560091"}</p>
+          <a data-map-link href="#" target="_blank" rel="noopener" class="footer-map-action" aria-label="Open location in Google Maps">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+            <span>View on Google Maps</span>
           </a>
-          <div class="footer-contact-actions">
-            <a class="footer-contact-link" data-phone-link href="${cfg.phoneHref || "#"}">
+          
+          <div class="footer-call-wrap">
+            <a class="footer-call-link" data-phone-link href="${cfg.phoneHref || "#"}">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               <span data-phone-text>${cfg.phoneDisplay || "+91 99165 62870"}</span>
-            </a>
-            <a class="footer-contact-link" data-whatsapp-link href="#">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
-              <span>WhatsApp Us</span>
             </a>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
+
+      <div class="footer-bottom-row">
         <span>© ${new Date().getFullYear()} Saptha Aradhana Convention Hall. All rights reserved.</span>
-        <a href="https://creativenuts.in/" target="_blank" rel="noopener" class="footer-credit">Site by Creative Nuts</a>
+        <a href="https://www.bangalorefruits.com/" target="_blank" rel="noopener" class="footer-credit-link">Site by Bangalore Fruits</a>
       </div>
     </div>
   `;
 
+  // Floating WhatsApp button
+  const floatingWa = document.createElement("a");
+  floatingWa.className = "floating-whatsapp-btn";
+  floatingWa.setAttribute("data-whatsapp-link", "");
+  floatingWa.href = "#";
+  floatingWa.target = "_blank";
+  floatingWa.rel = "noopener";
+  floatingWa.setAttribute("aria-label", "Chat on WhatsApp");
+  floatingWa.innerHTML = `
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="floating-whatsapp-icon" width="54" height="54">
+  `;
+
   document.getElementById("site-header")?.replaceWith(header);
   document.getElementById("site-footer")?.replaceWith(footer);
+  document.body.appendChild(floatingWa);
 })();

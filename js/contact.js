@@ -22,11 +22,9 @@
     if (cfg.address) el.textContent = cfg.address;
   });
   document.querySelectorAll("[data-map-link]").forEach(el => {
-    if (cfg.mapsQuery) {
-      el.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cfg.mapsQuery)}`;
-      el.target = "_blank";
-      el.rel = "noopener";
-    }
+    el.href = cfg.mapDirectUrl || `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(cfg.mapsQuery || "APSARA CONVENTION HALL")}`;
+    el.target = "_blank";
+    el.rel = "noopener";
   });
 
   // ================================================================

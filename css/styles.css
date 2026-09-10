@@ -1863,42 +1863,48 @@ button, input, select, textarea {
   pointer-events: none !important;
 }
 
-/* FOOTER (NO MAIL, FULL ADDRESS & DEVELOPER CREDIT) */
+/* ================================================================
+   LUXURY ARCHITECTURAL FOOTER DESIGN (CLEAN & MINIMAL)
+   ================================================================ */
 .site-footer {
-  background: var(--dark);
+  background: linear-gradient(180deg, #10332B 0%, #0B251F 100%);
   color: #fff;
+  border-top: 1px solid rgba(204, 146, 73, 0.22);
+  position: relative;
+  overflow: hidden;
 }
 
 .footer-inner {
-  width: min(1320px, calc(100% - 48px));
+  width: min(1200px, calc(100% - 48px));
   margin: 0 auto;
-  padding: 84px 0 26px;
+  padding: 48px 0 24px;
 }
 
-.footer-grid {
+/* 01 MID GRID: BRAND & PROMISE, LINKS, LOCATION */
+.footer-mid-grid {
   display: grid;
-  grid-template-columns: 1.5fr 0.7fr 0.9fr;
-  gap: 8%;
-  padding-bottom: 72px;
+  grid-template-columns: 1.35fr 0.8fr 1.25fr;
+  gap: clamp(28px, 4.5vw, 54px);
+  padding-bottom: 34px;
+  align-items: flex-start;
 }
 
 .footer-brand {
   display: inline-flex;
   align-items: center;
-  margin-bottom: 24px;
-  margin-left: -12px;
   text-decoration: none;
-  width: fit-content;
+  margin-left: -26px;
+  margin-top: -46px;
 }
 
 .footer-logo-img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 75px;
   object-fit: contain;
   border-radius: 50%;
   display: block;
   flex-shrink: 0;
-  transition: transform 0.28s ease;
+  transition: transform 0.25s ease;
 }
 
 .footer-brand:hover .footer-logo-img {
@@ -1906,108 +1912,174 @@ button, input, select, textarea {
 }
 
 .footer-logo-text {
-  height: 90px;
+  height: 100px;
   width: auto;
   object-fit: contain;
-  margin-left: -60px;
-  margin-top: 14px;
+  margin-left: -69px;
+  margin-top: 18px;
   display: block;
-  transition: transform 0.25s ease;
 }
 
-.footer-brand:hover .footer-logo-text {
-  transform: translateX(2px);
+.footer-tagline-text {
+  font-family: "Instrument Serif", Georgia, serif !important;
+  font-size: clamp(23px, 2.2vw, 27px);
+  line-height: 1.15;
+  color: #ffffff !important;
+  margin: 14px 0 10px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
-.footer-statement {
-  font-family: "Manrope", sans-serif;
-  font-size: clamp(34px, 3.8vw, 48px);
-  line-height: 1.05;
-  letter-spacing: -0.045em;
-  font-weight: 300;
-}
-
-.footer-sub {
-  max-width: 340px;
-  margin-top: 22px;
-  color: rgba(255, 255, 255, 0.55);
+.footer-desc-text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
   font-size: 13px;
-  line-height: 1.75;
+  line-height: 1.65;
+  max-width: 330px;
 }
 
-.footer-label {
-  font-size: 11px;
-  text-transform: capitalize;
-  letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.45);
-  font-weight: 500;
-  margin-bottom: 18px;
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.footer-link {
-  display: block;
-  margin-top: 12px;
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 13px;
-  text-transform: capitalize;
-  transition: color 0.25s, transform 0.25s;
+.footer-link-item {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13.5px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: fit-content;
 }
 
-.footer-link:hover {
-  color: #fff;
+.footer-link-item:hover {
+  color: #CC9249;
   transform: translateX(3px);
 }
 
-.footer-address-text {
-  margin: 0;
+.footer-title {
   font-size: 13.5px;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 12px;
+  letter-spacing: 0.02em;
 }
 
-.footer-contact-actions {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.footer-address-line {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 360px;
 }
 
-.footer-contact-link {
+.footer-map-action {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 13px;
-  text-transform: capitalize;
-  transition: color 0.25s;
+  gap: 7px;
+  color: #CC9249;
+  font-size: 12.5px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 14px;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.footer-contact-link:hover {
-  color: #fff;
+.footer-map-action:hover {
+  color: #ffffff;
+  transform: translateX(3px);
+  text-decoration: underline;
 }
 
-.footer-bottom {
+.footer-call-wrap {
+  margin-top: 4px;
+}
+
+.footer-call-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffffff;
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-call-link svg {
+  color: #CC9249;
+  flex-shrink: 0;
+}
+
+.footer-call-link:hover {
+  color: #CC9249;
+  transform: translateX(2px);
+}
+
+/* 02 BOTTOM ROW */
+.footer-bottom-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding-top: 22px;
+  gap: 16px;
+  padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.4);
-  font-size: 11px;
-  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.footer-credit {
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: 500;
+.footer-credit-link {
+  color: rgba(255, 255, 255, 0.88);
   text-decoration: none;
+  font-weight: 500;
   transition: color 0.2s ease;
 }
 
-.footer-credit:hover {
+.footer-credit-link:hover {
   color: #fff;
   text-decoration: underline;
+}
+
+/* ================================================================
+   FLOATING WHATSAPP BUTTON (BOTTOM CORNER - NO BG COLOR)
+   ================================================================ */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 54px;
+  height: 54px;
+  background: transparent !important;
+  box-shadow: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  text-decoration: none;
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), filter 0.28s ease;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+}
+
+.floating-whatsapp-btn:hover {
+  transform: scale(1.12) translateY(-2px);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
+}
+
+.floating-whatsapp-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+@media (max-width: 500px) {
+  .floating-whatsapp-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+  }
 }
 
 /* ================================================================
@@ -2799,19 +2871,7 @@ button, input, select, textarea {
   padding: clamp(34px, 5vw, 56px);
 }
 
-.form-kicker-pill {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--primary);
-  background: rgba(18, 55, 47, 0.07);
-  border: 1px solid rgba(18, 55, 47, 0.14);
-  padding: 5px 14px;
-  border-radius: var(--radius-pill);
-  margin-bottom: 12px;
-}
+
 
 .form-main-title {
   font-family: "Instrument Serif", Georgia, serif !important;
@@ -2953,7 +3013,7 @@ button, input, select, textarea {
     margin-left: -36px;
   }
   .footer-brand {
-    margin-left: 0;
+    margin-left: -15px;
   }
   .footer-logo-img {
     height: 48px;
@@ -3030,8 +3090,8 @@ button, input, select, textarea {
   }
   .visual-trio-grid { grid-template-columns: 1fr; }
   .map-wrap { height: 320px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .footer-col-brand { grid-column: span 2; }
+  .footer-mid-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-col-venue-info { grid-column: span 2; }
 
   /* Hide enquiry button in mobile navbar across home, about, and all pages */
   .header-enquire-btn,
@@ -3134,9 +3194,9 @@ button, input, select, textarea {
   .form-row { grid-template-columns: 1fr; gap: 0; }
   .lux-form-light { padding: 24px 18px; }
   .map-wrap { height: 260px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 35px; }
-  .footer-col-brand { grid-column: auto; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .footer-mid-grid { grid-template-columns: 1fr; gap: 24px; padding: 22px 0 18px; }
+  .footer-col-venue-info { grid-column: auto; }
+  .footer-bottom-row { flex-direction: column; align-items: flex-start; gap: 8px; }
 
   /* Small phone gallery sizing */
   .home-gallery {
