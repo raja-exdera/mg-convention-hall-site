@@ -64,7 +64,7 @@
 
         <div class="footer-mid-col footer-col-links">
           <nav class="footer-nav-list" aria-label="Footer navigation">
-            <a class="footer-link-item" href="${prefix}index.html">Home</a>
+            <a class="footer-link-item footer-link-home" href="${prefix}index.html">Home</a>
             <a class="footer-link-item" href="${prefix}pages/about.html">About</a>
             <a class="footer-link-item" href="${prefix}pages/gallery.html">Gallery</a>
             <a class="footer-link-item" href="${prefix}pages/contact.html">Contact Us</a>
@@ -85,10 +85,10 @@
 
         <div class="footer-mid-col footer-col-qr">
           <div class="footer-qr-card">
+            <p class="footer-qr-caption">Scan to Get Directions</p>
             <a data-map-link href="${cfg.mapDirectUrl || "https://maps.app.goo.gl/oUzMWXAy881o2V538"}" target="_blank" rel="noopener" class="footer-qr-link" aria-label="Open location in Google Maps">
               <img src="${prefix}assets/map-qr.svg" alt="Google Maps Location QR Code" class="footer-qr-img" width="96" height="96">
             </a>
-            <p class="footer-qr-caption">Scan this QR code to open<br>our location in Google Maps.</p>
           </div>
         </div>
       </div>
