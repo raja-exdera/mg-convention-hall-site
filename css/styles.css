@@ -1895,11 +1895,11 @@ button:hover .icon-arrow-action,
   padding: 48px 0 24px;
 }
 
-/* 01 MID GRID: BRAND & PROMISE, LINKS, LOCATION */
+/* 01 MID GRID: BRAND & PROMISE, LINKS, LOCATION, QR */
 .footer-mid-grid {
   display: grid;
-  grid-template-columns: 1.35fr 0.8fr 1.25fr;
-  gap: clamp(28px, 4.5vw, 54px);
+  grid-template-columns: 1.35fr 0.7fr 1.25fr 0.9fr;
+  gap: clamp(24px, 3.5vw, 48px);
   padding-bottom: 34px;
   align-items: flex-start;
 }
@@ -1981,29 +1981,20 @@ button:hover .icon-arrow-action,
 }
 
 .footer-address-line {
-  margin: 0 0 10px;
+  display: block;
+  margin: 0 0 14px;
   font-size: 13px;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.88);
-  max-width: 360px;
-}
-
-.footer-map-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  color: #CC9249;
-  font-size: 12.5px;
   text-decoration: none;
-  font-weight: 500;
-  margin-bottom: 14px;
+  max-width: 360px;
   transition: color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
 }
 
-.footer-map-action:hover {
-  color: #ffffff;
-  transform: translateX(3px);
-  text-decoration: underline;
+.footer-address-line:hover {
+  color: #CC9249;
+  transform: translateX(2px);
 }
 
 .footer-call-wrap {
@@ -2029,6 +2020,54 @@ button:hover .icon-arrow-action,
 .footer-call-link:hover {
   color: #CC9249;
   transform: translateX(2px);
+}
+
+.footer-col-qr {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-qr-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-qr-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(204, 146, 73, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.footer-qr-link:hover {
+  transform: translateY(-2px);
+  border-color: #CC9249;
+  box-shadow: 0 6px 18px rgba(204, 146, 73, 0.3);
+}
+
+.footer-qr-img {
+  width: 96px;
+  height: 96px;
+  display: block;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.footer-qr-caption {
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+  margin: 0;
+  max-width: 190px;
 }
 
 /* 02 BOTTOM ROW */
@@ -3120,7 +3159,7 @@ button:hover .icon-arrow-action,
   .visual-trio-grid { grid-template-columns: 1fr; }
   .map-wrap { height: 320px; }
   .footer-mid-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .footer-col-venue-info { grid-column: span 2; }
+  .footer-col-venue-info { grid-column: auto; }
 
   /* Hide enquiry button in mobile navbar across home, about, and all pages */
   .header-enquire-btn,
@@ -3277,6 +3316,10 @@ button:hover .icon-arrow-action,
   .contact-channels-section {
     padding: 20px 0 36px !important;
   }
+  .footer-qr-card {
+    align-items: flex-start;
+  }
+ 
 }
 
 @media (prefers-reduced-motion: reduce) {
