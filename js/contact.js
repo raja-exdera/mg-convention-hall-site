@@ -679,24 +679,60 @@
     }
 
     const data = new FormData(form);
-    const message = [
-      `*New Event Enquiry — ${cfg.venueName || "Saptha Aradhana Convention Hall"}*`,
-      ``,
-      `*Name:* ${data.get("name")}`,
-      `*Contact:* ${data.get("contact")}`,
-      `*Event Date:* ${data.get("date")}`,
-      `*Event Type:* ${data.get("eventType")}`,
-      `*Requirements:* ${data.get("message") || "—"}`
-    ].join("\n");
-
-    if (cfg.whatsappNumber && !cfg.whatsappNumber.includes("X")) {
-      window.open(`https://wa.me/${cfg.whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener");
-      status.textContent = "Opening WhatsApp to send your enquiry…";
-    } else {
-      window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, "_blank", "noopener");
-      status.textContent = "Opening WhatsApp with your event enquiry details…";
+    
+    const submitBtn = form.querySelector('button[type="submit"]');
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.7';
     }
 
+    status.textContent = "Sending your enquiry...";
     status.classList.remove("hidden");
+    status.style.color = "inherit";
+
+    fetch("send_mail.php", {
+      method: "POST",
+      body: data
+    })
+    .then(response => {
+      if (!response.ok) {
+        return response.json().then(err => Promise.reject(err));
+      }
+      return response.json();
+    })
+    .then(result => {
+      if (result.status === "success") {
+        status.textContent = result.message;
+        status.style.color = "#2c7a3f";
+        form.reset();
+        
+        // Reset custom UI elements
+        const dateDisplay = form.querySelector(".custom-date-display");
+        if (dateDisplay) {
+          dateDisplay.textContent = "Select event date";
+          dateDisplay.classList.add("is-placeholder");
+        }
+        
+        const selectLabel = form.querySelector(".custom-select-label");
+        if (selectLabel) {
+          selectLabel.textContent = form.elements.eventType?.options[0]?.text || "Select event";
+          selectLabel.classList.add("is-placeholder");
+        }
+      } else {
+        status.textContent = result.message || "An error occurred while sending.";
+        status.style.color = "#d9534f";
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      status.textContent = err.message || "Could not connect to the server. Please try again.";
+      status.style.color = "#d9534f";
+    })
+    .finally(() => {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+      }
+    });
   });
 })();
