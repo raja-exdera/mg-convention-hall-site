@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Redirect index.html to the root domain (/)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Redirect any request ending in .html to the version without .html
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
+RewriteRule ^([^.]+)\.html$ /$1 [R=301,L]
+
+# Internally map the URL without .html back to the .html file (so the server knows what to load)
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ $1.html [L]

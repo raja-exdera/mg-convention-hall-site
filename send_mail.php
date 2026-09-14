@@ -24,9 +24,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail = new PHPMailer(true);
 
     try {
-        To use SMTP, uncomment the lines below and configure your SMTP server details
+        // To use SMTP, uncomment the lines below and configure your SMTP server details
         $mail->isSMTP();
-        $mail->Host       = 'smtp.example.com';
+        $mail->Host       = 'smtp.gmail.com';
         $mail->SMTPAuth   = true;
         $mail->Username   = 'aajithelangovan@gmail.com';
         $mail->Password   = 'nytf divn toaf sjoi';

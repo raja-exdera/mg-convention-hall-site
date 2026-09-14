@@ -1,9 +1,9 @@
 
 (() => {
   const path = location.pathname;
-  const prefix = path.includes("/pages/") ? "../" : "";
-  const isSubPage = path.includes("/pages/") || !document.querySelector(".lux-hero");
-  const isHome = !path.includes("/pages/") && (path.endsWith("index.html") || path.endsWith("/") || !path.includes(".html"));
+  const prefix = "";
+  const isSubPage = !document.querySelector(".lux-hero");
+  const isHome = (path.endsWith("index.html") || path.endsWith("/") || path === "");
   const isAbout = path.includes("about");
   const isGallery = path.includes("gallery");
   const isContact = path.includes("contact");
@@ -24,12 +24,12 @@
 
       <nav class="nav-links header-center" aria-label="Primary navigation">
         <a href="${prefix}index.html" class="${isHome ? "active" : ""}">Home</a>
-        <a href="${prefix}pages/about.html" class="${isAbout ? "active" : ""}">About</a>
-        <a href="${prefix}pages/gallery.html" class="${isGallery ? "active" : ""}">Gallery</a>
+        <a href="${prefix}about-us" class="${isAbout ? "active" : ""}">About</a>
+        <a href="${prefix}gallery" class="${isGallery ? "active" : ""}">Gallery</a>
       </nav>
 
       <div class="header-right">
-        <a href="${prefix}pages/contact.html" class="header-enquire-btn">
+        <a href="${prefix}contact" class="header-enquire-btn">
           <span>Enquiry</span>
           <svg class="icon-arrow-action" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
         </a>
@@ -39,9 +39,9 @@
 
     <div class="mobile-menu" id="mobile-menu">
       <a href="${prefix}index.html">Home</a>
-      <a href="${prefix}pages/about.html">About</a>
-      <a href="${prefix}pages/gallery.html">Gallery</a>
-      <a href="${prefix}pages/contact.html" class="mobile-enquire-link">
+      <a href="${prefix}about-us">About</a>
+      <a href="${prefix}gallery">Gallery</a>
+      <a href="${prefix}contact" class="mobile-enquire-link">
         <span>Enquiry Now</span>
         <svg class="icon-arrow-action" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
       </a>
@@ -65,9 +65,9 @@
         <div class="footer-mid-col footer-col-links">
           <nav class="footer-nav-list" aria-label="Footer navigation">
             <a class="footer-link-item footer-link-home" href="${prefix}index.html">Home</a>
-            <a class="footer-link-item" href="${prefix}pages/about.html">About</a>
-            <a class="footer-link-item" href="${prefix}pages/gallery.html">Gallery</a>
-            <a class="footer-link-item" href="${prefix}pages/contact.html">Contact Us</a>
+            <a class="footer-link-item" href="${prefix}about-us">About</a>
+            <a class="footer-link-item" href="${prefix}gallery">Gallery</a>
+            <a class="footer-link-item" href="${prefix}contact">Contact Us</a>
           </nav>
         </div>
 
