@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  
         // Use the default mail() function for now
         $mail->setFrom('noreply@' . ($_SERVER['HTTP_HOST'] ?? 'sapthaaradhana.com'), 'Saptha Aradhana Website');
-        $mail->addAddress('sapthaaradana@gmail.com', 'Saptha Aradhana');
+        $mail->addAddress('contact@sapthaaradhana.com', 'Saptha Aradhana');
         
         $mail->isHTML(true);
         $mail->Subject = 'New Event Enquiry from ' . $name;

@@ -15,7 +15,7 @@
   header.innerHTML = `
     <div class="site-header-inner">
       <div class="header-left">
-        <a class="brand" href="${prefix}index.html" aria-label="${cfg.venueName || "Saptha Aradhana Convention Hall"}">
+        <a class="brand" href="/" aria-label="${cfg.venueName || "Saptha Aradhana Convention Hall"}">
           <img src="${prefix}assets/logo.png" alt="Saptha Aradhana Logo" class="brand-logo-img">
           <img src="${prefix}assets/logo-light-text.png" alt="Saptha Aradhana" class="brand-logo-text brand-logo-text-light">
           <img src="${prefix}assets/logo-dark-text.png" alt="Saptha Aradhana" class="brand-logo-text brand-logo-text-dark">
@@ -23,7 +23,7 @@
       </div>
 
       <nav class="nav-links header-center" aria-label="Primary navigation">
-        <a href="${prefix}index.html" class="${isHome ? "active" : ""}">Home</a>
+        <a href="/" class="${isHome ? "active" : ""}">Home</a>
         <a href="${prefix}about-us" class="${isAbout ? "active" : ""}">About</a>
         <a href="${prefix}gallery" class="${isGallery ? "active" : ""}">Gallery</a>
       </nav>
@@ -38,7 +38,7 @@
     </div>
 
     <div class="mobile-menu" id="mobile-menu">
-      <a href="${prefix}index.html">Home</a>
+      <a href="/">Home</a>
       <a href="${prefix}about-us">About</a>
       <a href="${prefix}gallery">Gallery</a>
       <a href="${prefix}contact" class="mobile-enquire-link">
@@ -54,7 +54,7 @@
     <div class="footer-inner">
       <div class="footer-mid-grid">
         <div class="footer-mid-col footer-col-intro">
-          <a class="footer-brand" href="${prefix}index.html" aria-label="${cfg.venueName || "Saptha Aradhana Convention Hall"}">
+          <a class="footer-brand" href="/" aria-label="${cfg.venueName || "Saptha Aradhana Convention Hall"}">
             <img src="${prefix}assets/logo.png" alt="Saptha Aradhana Emblem" class="footer-logo-img">
             <img src="${prefix}assets/logo-light-text.png" alt="Saptha Aradhana" class="footer-logo-text">
           </a>
@@ -64,7 +64,7 @@
 
         <div class="footer-mid-col footer-col-links">
           <nav class="footer-nav-list" aria-label="Footer navigation">
-            <a class="footer-link-item footer-link-home" href="${prefix}index.html">Home</a>
+            <a class="footer-link-item footer-link-home" href="/">Home</a>
             <a class="footer-link-item" href="${prefix}about-us">About</a>
             <a class="footer-link-item" href="${prefix}gallery">Gallery</a>
             <a class="footer-link-item" href="${prefix}contact">Contact Us</a>
