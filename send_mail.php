@@ -21,6 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
+    if (!preg_match('/^(?:\+?91[\-\s]?)?[6-9](?:[\-\s]*\d){9}$/', $contact)) {
+        http_response_code(400);
+        echo json_encode(["status" => "error", "message" => "Please enter a valid 10-digit Indian phone number."]);
+        exit;
+    }
+
     $mail = new PHPMailer(true);
 
     try {
@@ -32,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Password   = 'nytf divn toaf sjoi';
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port       = 465;
-
+ 
         // Use the default mail() function for now
         $mail->setFrom('noreply@' . ($_SERVER['HTTP_HOST'] ?? 'sapthaaradhana.com'), 'Saptha Aradhana Website');
         $mail->addAddress('sapthaaradana@gmail.com', 'Saptha Aradhana');

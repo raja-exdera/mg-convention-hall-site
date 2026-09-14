@@ -651,8 +651,9 @@
       return;
     }
 
-    if (!contact) {
-      status.textContent = "Please enter your phone or WhatsApp number.";
+    const phoneRegex = /^(?:\+?91[\-\s]?)?[6-9](?:[\-\s]*\d){9}$/;
+    if (!contact || !phoneRegex.test(contact)) {
+      status.textContent = "Please enter a valid 10-digit Indian phone number.";
       status.classList.remove("hidden");
       form.elements.contact?.focus();
       return;
